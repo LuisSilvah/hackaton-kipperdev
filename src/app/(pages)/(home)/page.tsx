@@ -49,12 +49,11 @@ export default function Home() {
     <main className="flex flex-col min-h-dvh items-center justify-center">
       <Banner />
 
-     
       <section className="py-6 md:py-12 lg:py-16">
         <div className="container space-y-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Como Proteger-se da Poluição do Ar
+              Como Proteger-se da Poluição do Ar
             </h2>
             <p className="mt-4 max-w-3xl mx-auto text-muted-foreground">
               Se o ar está poluído, considere as seguintes ações para proteger
@@ -84,28 +83,17 @@ export default function Home() {
         </div>
       </section>
 
-    <hr className="bg-black w-full"/>
+      <hr className="bg-black w-full" />
 
       <section className="py-6">
         <div className="container space-y-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Eventos Comunitários 
+              Eventos Comunitários
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {eventos.map((item) => {
-              return (
-                <EventCard
-                  title={item.title}
-                  describe={item.describe}
-                  data={item.data}
-                  estado={item.estado}
-                  cidade={item.cidade}
-                  key={item.id}
-                />
-              );
-            })}
+            <EventCard />
           </div>
         </div>
       </section>
@@ -115,8 +103,9 @@ export default function Home() {
             Tome medidas para prevenir queimadas.
           </h2>
           <p className="max-w-3xl mx-auto text-muted-foreground">
-          Junte-se a nós em nossa missão de conscientizar e tomar medidas concretas para 
-          proteger nossas comunidades e o meio ambiente dos impactos devastadores dos incêndios florestais.
+            Junte-se a nós em nossa missão de conscientizar e tomar medidas
+            concretas para proteger nossas comunidades e o meio ambiente dos
+            impactos devastadores dos incêndios florestais.
           </p>
           <div className="flex justify-center gap-4">
             <Link
