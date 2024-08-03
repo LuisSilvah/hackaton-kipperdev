@@ -8,7 +8,7 @@ export function Header() {
         <FlameIcon className="w-8 h-8" />
         <span className="text-lg text-center font-bold font-roboto">Hackaton Climates</span>
       </div>
-      <nav className="flex space-x-4">
+      <nav className="flex space-x-4 underline font-roboto">
         <Link href="/" prefetch={false}>
           Home
         </Link>
