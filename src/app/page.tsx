@@ -5,7 +5,7 @@ import {
   LeafIcon,
   ThermometerIcon,
   ChatDialog,
-  AmbulanceIcon
+  AmbulanceIcon,
 } from "@/app/components";
 import Link from "next/link";
 import { FadeUp } from "./components/Animations/FadeUp";
@@ -29,14 +29,14 @@ export default function Home() {
               <TextReveal
                 style="from-[#a1cde3] via-gray-500 to-[#cbdfd1]"
                 // o que define style de ser a cor escolhida é a direção das cores
-                text="Climate Change: A Personal Journey"
+                text="O desastre avança  mais que a evolução da natureza"
               />
             </h1>
 
             <div className=" p-[100px] mx-auto text-4xl font-extrabold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
               <TextReveal
                 style="from-[#6b22fc] via-gray-500 to-[#3e51e3]"
-                className="relative top-10"
+                className=""
                 text="As mudanças climáticas são um dos problemas mais urgentes do nosso tempo, afetando todos os aspectos da vida na Terra. ."
               />
             </div>
@@ -88,17 +88,17 @@ export default function Home() {
         </section>
         <ComponentTopic>
           <div className="space-y-6 ">
-            <h1 className="text-4xl font-extrabold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="">
               <TextReveal
                 style="from-blue-600 via-gray-800 to-sky-200"
                 text="A interrupção dos meios de subsistência, o deslocamento devido a eventos climáticos extremos e os riscos aumentados à saúde são alguns dos impactos humanos que precisam ser abordados através da contação de histórias."
               />
             </h1>
 
-            <div className=" p-[100px] mx-auto text-4xl font-extrabold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
+            <div className=" ">
               <TextReveal
                 style="from-red-600 via-gray-800 to-lime-200"
-                className="relative top-10"
+                className=""
                 text="A importância de reduzir as emissões não pode ser exagerada. Mitigar as mudanças climáticas requer um esforço concentrado para reduzir as emissões de gases de efeito estufa em todos os setores da sociedade."
               />
             </div>
@@ -107,6 +107,10 @@ export default function Home() {
               <TextReveal
                 style="from-green-600 via-gray-800 to-blue-500"
                 text="Os esforços de remoção de dióxido de carbono (CDR) baseados na natureza são igualmente essenciais."
+              />
+              <TextReveal
+                style="from-violet-600 via-gray-800 to-lime-500"
+                text="A queima de combustíveis fósseis, como carvão, petróleo e gás natural para energia, é a maior fonte de emissões de gases de efeito estufa. "
               />
             </div>
           </div>
@@ -141,9 +145,10 @@ export default function Home() {
                 Donate
               </Link>
               <Link
-                href="/eventos"
+                href="https://chat.whatsapp.com/F3cwyRNThgxAuaNWxFBL2S"
                 className="inline-flex items-center justify-center rounded-md border border-input bg-gray-800 text-white px-8 py-3 font-medium shadow-sm transition-colors hover:bg-gray-700 hover:text-accent-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-100 focus-visible:ring-offset-2"
                 prefetch={false}
+                target="_blank"
               >
                 junte-se a nós
               </Link>

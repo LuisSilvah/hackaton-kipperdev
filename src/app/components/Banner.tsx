@@ -33,7 +33,15 @@ export function Banner() {
 
           <AirPollution />
 
-          <ShinyButton text="junte-se a nós" />
+          <div className="w-full ">
+            <Link
+              href={"https://chat.whatsapp.com/F3cwyRNThgxAuaNWxFBL2S"}
+              target="_blank"
+              className="py-4 "
+            >
+              <ShinyButton text="junte-se a nós" />
+            </Link>
+          </div>
         </div>
       </main>
     </section>
