@@ -22,13 +22,12 @@ export function AirPollution() {
           setLatitude(position.coords.latitude);
           setLongitude(position.coords.longitude);
         },
-        (error) => {
-          console.error("Error getting location", error);
-          alert("Error getting location");
+        () => {
+          alert("Erro ao buscar localização");
         }
       );
     } else {
-      alert("Geolocation is not supported by this browser.");
+      alert("Geolocalização não é suportado pelo seu browser");
     }
   };
 
@@ -54,8 +53,7 @@ export function AirPollution() {
         setAirPollutionColor("green");
       }
     } catch (error) {
-      console.error("Error fetching data", error);
-      alert("Error fetching data");
+      alert("Não foi posssivel buscar dados de poluição");
     }
   };
 
@@ -68,8 +66,7 @@ export function AirPollution() {
       const data: WeatherResponse = await response.json();
       setWeather(data);
     } catch (error) {
-      console.error("Error fetching temperature", error);
-      alert("Error fetching temperature");
+      alert("Não foi posssivel buscar dados de temperatura");
     }
   };
 
@@ -113,7 +110,7 @@ export function AirPollution() {
       <div className="flex gap-4">
         <FilterIcon className="w-8 h-8" color={airPollutionColor} />
         <span className="text-xl font-roboto font-medium">
-          Nível de Poluição: {airQualityPollution?.list[0].main.aqi}
+          Nível de Poluição AQI: {airQualityPollution?.list[0]?.main.aqi}
         </span>
       </div>
     </div>

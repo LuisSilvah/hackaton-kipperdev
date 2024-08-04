@@ -1,10 +1,14 @@
 import Image from "next/image";
 import { AirPollution } from "./AirPollution";
 import Link from "next/link";
+import WordFadeIn from "@/components/magicui/word-fade-in";
+import { ShinyComponent } from "@/components/component/ShinyComponent";
+import ShinyButton from "@/components/magicui/shiny-button";
 
 export function Banner() {
   return (
     <section className="py-16 md:py-20 lg:pt-20">
+      <ShinyComponent />
       <main className="flex flex-col items-center justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-8">
         <div className="w-full max-w-md">
           <Image
@@ -18,18 +22,18 @@ export function Banner() {
           />
         </div>
         <div className="w-full max-w-lg space-y-4 text-center md:text-left">
-          <h1 className="text-4xl font-bold md:text-6xl">CHANGE CLIMATES</h1>
-          <p className="text-lg text-gray-700">Breve Descrição</p>
+          <h1 className="sm:text-5xl md:text-6xl pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#c2aaa6] from-35% to-[#ff0606] bg-clip-text text-center text-6xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)] drop-shadow-xl">
+            <WordFadeIn words="Fortalecendo  um  futuro sustentável" />
+          </h1>
+          <p className="text-lg text-gray-700">
+            Junte-se a nós em nossa missão de combater as mudanças climáticas e
+            criar um mundo mais verde e resiliente para todos. Juntos, podemos
+            causar um impacto duradouro.
+          </p>
 
           <AirPollution />
 
-          <Link
-            href="#"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-gray-800 text-white px-8 py-3 font-medium shadow-sm transition-colors hover:bg-gray-700 hover:text-accent-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-100 focus-visible:ring-offset-2"
-            prefetch={false}
-          >
-            junte-se a nós
-          </Link>
+          <ShinyButton text="junte-se a nós" />
         </div>
       </main>
     </section>

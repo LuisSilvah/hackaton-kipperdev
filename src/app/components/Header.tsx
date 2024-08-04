@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FlameIcon, LeafIcon } from "./Icons";
+import {  FlameIcon } from "./Icons";
 import { FadeDown } from "./Animations/FadeDown";
 
 export function Header() {
