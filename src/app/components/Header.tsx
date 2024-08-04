@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { FlameIcon, LeafIcon } from "./Icons";
+import {  FlameIcon } from "./Icons";
 import { FadeDown } from "./Animations/FadeDown";
 
 export function Header() {
   return (
     <FadeDown>
-      <header className="fixed w-full flex items-center justify-between p-4 bg-transparent bg-[#62b2ff] bg-opacity-40  text-white">
+      <header className="fixed w-full flex items-center justify-between p-4 bg-transparent bg-[#62b2ff] bg-opacity-40  text-black">
         <div className="flex items-center space-x-2">
-          <LeafIcon className="w-8 h-8 text-primary" />
+          <FlameIcon className="w-8 h-8 text-primary" />
           <span className="text-lg text-center font-bold font-roboto">
             Hackaton Climates
           </span>

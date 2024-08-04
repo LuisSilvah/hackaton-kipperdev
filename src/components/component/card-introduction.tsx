@@ -27,11 +27,11 @@ import { ShinyComponent } from "./ShinyComponent";
 
 export function CardIntroduction() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-primary-foreground bg-background">
+    <section className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6 flex flex-col items-center justify-center text-center space-y-6">
         <div className="space-y-4">
           <ShinyComponent />
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#c2aaa6] from-35% to-[#ff0606] bg-clip-text text-center text-6xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)] drop-shadow-xl">
+          <h1 className="sm:text-5xl md:text-6xl pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#c2aaa6] from-35% to-[#ff0606] bg-clip-text text-center text-6xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)] drop-shadow-xl">
             <WordFadeIn words="Empowering a Sustainable Future" />
           </h1>
           <p className="font-bold max-w-[700] lg:max-w-[500px] text-[#000000] md:text-xl/relaxed lg:text-base/relaxed xl:text-2xl/relaxed">

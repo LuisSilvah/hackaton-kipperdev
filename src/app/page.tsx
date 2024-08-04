@@ -1,27 +1,22 @@
 import {
-  AmbulanceIcon,
   Banner,
   Card,
-  CloudLightningIcon,
   EventCard,
-  FireExtinguisherIcon,
-  FlameIcon,
-  HomeIcon,
   LeafIcon,
   ThermometerIcon,
-  TreesIcon,
+  ChatDialog,
+  AmbulanceIcon
 } from "@/app/components";
-import { ChatDialog } from "@/app/components/Dialogs/ChatDialog";
 import Link from "next/link";
 import { FadeUp } from "./components/Animations/FadeUp";
 import { HeroComponent } from "../components/component/hero-component";
 
-export default function Pages() {
+export default function Home() {
   return (
     <FadeUp>
       <main className="flex flex-col min-h-dvh items-center justify-center">
-        {/* <Banner /> */}
-        <HeroComponent />
+        <Banner />
+        {/* <HeroComponent /> */}
 
         <div className="fixed bottom-10 right-10 z-50 bg-opacity-50 rounded-xl ">
           <ChatDialog />

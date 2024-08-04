@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${roboto.variable} ${poppins.variable} bg-[#CBDFD1]`}
-        cz-shortcut-listen="true"
+        // cz-shortcut-listen="true"
       >
         <Header />
         {children}
