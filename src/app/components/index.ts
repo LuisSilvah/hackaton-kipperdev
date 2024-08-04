@@ -3,6 +3,7 @@ export * from "./Banner";
 export * from "./AirPollution"
 export * from "./Card"
 export * from "./EventCard"
+export {ChatDialog} from "./Dialogs/ChatDialog"
 export {
   AmbulanceIcon,
   CloudLightningIcon,
