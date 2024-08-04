@@ -3,9 +3,8 @@ import { AirPollution } from "./AirPollution";
 import Link from "next/link";
 
 export function Banner() {
-
   return (
-    <section className="py-12 md:py-24 lg:py-32 bg-muted">
+    <section className="py-16 md:py-20 lg:pt-20">
       <main className="flex flex-col items-center justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-8">
         <div className="w-full max-w-md">
           <Image
@@ -31,7 +30,6 @@ export function Banner() {
           >
             junte-se a nós
           </Link>
-
         </div>
       </main>
     </section>

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins, Roboto } from "next/font/google";
 // import { Header } from "./components";
-import "./styles/globals.css"
+import { FooterComponent } from "../components/component/footer-component";
+import "./styles/globals.css";
 import { Header } from "./components";
 
 const roboto = Roboto({
@@ -18,13 +19,11 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-
 export const metadata: Metadata = {
   title: "Hackaton Kipper Dev",
   description:
     "Tecnologia Contra Crises Climáticas: Soluções para Cidades Resilientes",
 };
-
 
 export default function RootLayout({
   children,
@@ -33,9 +32,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${poppins.variable} bg-[#CBDFD1]`} cz-shortcut-listen="true">
+      <body
+        className={`${roboto.variable} ${poppins.variable} bg-[#CBDFD1]`}
+        cz-shortcut-listen="true"
+      >
         <Header />
         {children}
+        <FooterComponent />
       </body>
     </html>
   );

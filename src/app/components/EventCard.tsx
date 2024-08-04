@@ -11,7 +11,7 @@ export const EventCard = () => {
   useEffect(() => {
     startTransition(async () => {
       const response = await fetch("/api/eventos");
-      const data = await response.json();
+      const data: EventCardType[] = await response.json();
       setEvento(data);
     });
   }, []);
@@ -25,15 +25,15 @@ export const EventCard = () => {
   }
 
   return (
-    <>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {evento.map((item, index) => {
         return (
           <div
             key={index}
-            className="bg-slate-100 rounded-lg p-6 shadow-md border cursor-pointer"
+            className="bg-slate-100 rounded-xl p-6 shadow-md border cursor-pointer"
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className="bg-primary text-primary-foreground rounded-full px-3 py-1 text-sm font-medium">
+              <div className="px-3 py-1 text-sm font-medium">
                 <span>{item.data}, </span>
                 <span>
                   {item.estado} - {item.cidade}
@@ -45,6 +45,6 @@ export const EventCard = () => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
