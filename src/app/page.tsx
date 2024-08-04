@@ -149,6 +149,7 @@ export default function Home() {
                 href="https://chat.whatsapp.com/F3cwyRNThgxAuaNWxFBL2S"
                 className="inline-flex items-center justify-center rounded-md border border-input bg-gray-800 text-white px-8 py-3 font-medium shadow-sm transition-colors hover:bg-gray-700 hover:text-accent-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-100 focus-visible:ring-offset-2"
                 prefetch={false}
+                target="_blank"
               >
                 junte-se a nós
               </Link>
