@@ -15,12 +15,17 @@ export function AirPollution() {
   const [airPollutionColor, setAirPollutionColor] =
     useState<AirPollutionColorType>("green");
 
-  const getLocation = () => {
+  const getLocation =  () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        (position) => {
-          setLatitude(position.coords.latitude);
-          setLongitude(position.coords.longitude);
+        async (position) => {
+          const latitude = position.coords.latitude
+          const longitude = position.coords.longitude
+
+          if (latitude !== null && longitude !== null) {
+            await fetchAirQualiPollution(latitude, longitude);
+            await fetchTemperature(latitude, longitude);
+          }
         },
         () => {
           alert("Erro ao buscar localização");
@@ -77,13 +82,6 @@ export function AirPollution() {
   useEffect(() => {
     getLocation();
   }, []);
-
-  useEffect(() => {
-    if (latitude !== null && longitude !== null) {
-      fetchAirQualiPollution(latitude, longitude);
-      fetchTemperature(latitude, longitude);
-    }
-  }, [latitude, longitude]);
 
   if (!weather && !airQualityPollution) {
     return <p>Loading...</p>;
