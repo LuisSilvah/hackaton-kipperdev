@@ -8,11 +8,13 @@ import { cn } from "@/lib/utils";
 interface TextRevealByWordProps {
   text: string;
   className?: string;
+  style?: string;
 }
 
 export const TextRevealByWord: FC<TextRevealByWordProps> = ({
   text,
   className,
+  style,
 }) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
 
@@ -30,15 +32,18 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
       >
         <p
           ref={targetRef}
-          className={
-            "flex flex-wrap p-5 text-2xl font-bold text-black/20 dark:text-white/20 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl"
-          }
+          className={`flex flex-wrap p-5 text-4xl font-bold bg-gradient-to-bl ${style} bg-clip-text text-transparent shadow-gray-500   md:p-8 md:text-xl lg:p-10 lg:text-6xl xl:text-6xl`}
         >
           {words.map((word, i) => {
             const start = i / words.length;
             const end = start + 1 / words.length;
             return (
-              <Word key={i} progress={scrollYProgress} range={[start, end]}>
+              <Word
+                key={i}
+                progress={scrollYProgress}
+                range={[start, end]}
+                style={style}
+              >
                 {word}
               </Word>
             );
@@ -53,16 +58,17 @@ interface WordProps {
   children: ReactNode;
   progress: any;
   range: [number, number];
+  style?: string;
 }
 
-const Word: FC<WordProps> = ({ children, progress, range }) => {
+const Word: FC<WordProps> = ({ children, progress, range, style }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
     <span className="xl:lg-3 relative mx-1 lg:mx-2.5">
       <span className={"absolute opacity-30"}>{children}</span>
       <motion.span
         style={{ opacity: opacity }}
-        className={"text-black dark:text-white"}
+        className={`bg-gradient-to-bl ${style} bg-clip-text  dark:text-white `}
       >
         {children}
       </motion.span>
