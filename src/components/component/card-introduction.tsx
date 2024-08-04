@@ -31,19 +31,26 @@ export function CardIntroduction() {
       <div className="container px-4 md:px-6 flex flex-col items-center justify-center text-center space-y-6">
         <div className="space-y-4">
           <ShinyComponent />
-          <h1 className="sm:text-5xl md:text-6xl pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#c2aaa6] from-35% to-[#ff0606] bg-clip-text text-center text-6xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)] drop-shadow-xl">
-            <WordFadeIn words="Empowering a Sustainable Future" />
+          <h1
+            className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-bl from-amber-400 via-[#012229] to-red-600 bg-clip-text text-transparent bg-clip-text te
+          zxt-center text-6xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)] drop-shadow-[0_5px_5px_rgba(255,255,255)]   "
+          >
+            <WordFadeIn
+              className="text-md "
+              words="Capacitando um Futuro Sustentável"
+            />
+
           </h1>
           <p className="font-bold max-w-[700] lg:max-w-[500px] text-[#000000] md:text-xl/relaxed lg:text-base/relaxed xl:text-2xl/relaxed">
             <WordFadeIn
-              words="Join us in our mission to combat climate change and create a
-            greener, more resilient world for all. Together, we can make a
-            lasting impact."
+              words="Junte-se a nós na nossa missão de combater as alterações climáticas e criar uma
+            um mundo mais verde e mais resiliente para todos. Juntos, podemos fazer um
+            impacto duradouro."
             />
           </p>
         </div>
 
-        <ShinyButton text="Get Involved" />
+        <ShinyButton text="Ingressar" />
       </div>
     </section>
   );
