@@ -4,6 +4,7 @@ import { Poppins, Roboto } from "next/font/google";
 import { FooterComponent } from "../components/component/footer-component";
 import "./styles/globals.css";
 import { Header } from "./components";
+import { AI } from "../../actions/chatContext";
 
 const roboto = Roboto({
   weight: ["400", "100", "500"],
@@ -36,9 +37,11 @@ export default function RootLayout({
         className={`${roboto.variable} ${poppins.variable} bg-[#CBDFD1]`}
         // cz-shortcut-listen="true"
       >
-        <Header />
-        {children}
-        <FooterComponent />
+        <AI>
+          <Header />
+          {children}
+          <FooterComponent />
+        </AI>
       </body>
     </html>
   );
