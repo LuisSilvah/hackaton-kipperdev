@@ -29,7 +29,7 @@ import Link from "next/link";
 export function FooterComponent() {
   return (
     <footer className="bg-gray-700 flex flex-col text-white py-12">
-      <div className="flex justify-between px-8">
+      <div className="flex justify-between max-sm:flex-col px-8">
         <div className="flex flex-1 flex-col items-start gap-4">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
             <LeafIcon className="w-8 h-8 text-primary" />
@@ -73,7 +73,7 @@ export function FooterComponent() {
             </div>
           </div>
         </div>
-        <div className="flex flex-1 justify-end gap-8">
+        <div className="flex desktop:flex-1 desktop:justify-end gap-8">
           <div className="flex flex-col gap-2">
             <h4 className="text-lg font-semibold">Links Rápidos</h4>
             <Link

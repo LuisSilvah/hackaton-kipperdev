@@ -131,8 +131,8 @@ export const ChatDialog = () => {
 
                       {m.role === "user" ? (
                         <>
-                          <div className="transition-all relative bottom-2 right-1 flex flex-col gap-1 w-full flex items-start  justify-start ml-8">
-                            <div className="transition-all rounded-lg bg-blue-200 rounded-xl shadow-md  px-4 py-2 text-sm dark:bg-gray-800 w-auto max-w-sm ">
+                          <div className="transition-all relative bottom-2 right-1  flex-col gap-1 w-full flex items-start  justify-start ml-8">
+                            <div className="transition-all  bg-blue-200 rounded-xl shadow-md  px-4 py-2 text-sm dark:bg-gray-800 w-auto max-w-sm ">
                               {m.content == ""
                                 ? " "
                                 : m.role === "user" && (
@@ -149,7 +149,7 @@ export const ChatDialog = () => {
                       ) : (
                         <>
                           <div className="transition-all  flex flex-col gap-1 w-auto">
-                            <div className="transition-all rounded-lg bg-lime-500  rounded-xl px-4 py-2 text-sm text-white">
+                            <div className="transition-all  bg-lime-500  rounded-xl px-4 py-2 text-sm text-white">
                               {m.role === "assistant" && (
                                 <>
                                   <Markdown>{m.content as string}</Markdown>
