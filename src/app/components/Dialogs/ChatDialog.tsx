@@ -1,5 +1,7 @@
 "use client";
 
+import Markdown from "react-markdown";
+
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -86,7 +88,7 @@ export const ChatDialog = () => {
         </ChatButton>
       </DialogTrigger>
       <DialogContent className=" transition-all bg-[#cbdfd1] max-w-md lg:max-w-2xl lg:mx-0 p-8 rounded-xl flex flex-col w-full h-auto">
-        <ScrollArea className=" h-[200px] w-full   border p-4 flex  bg-gray-200 rounded-xl shadow-xl ">
+        <ScrollArea className="transition-all min-h-[30px] h-[400px] max-h-[600px] w-full lg:h-[400px]   border p-4 flex  bg-gray-200 rounded-xl shadow-xl ">
           <div className="transition-all flex-1 overflow-auto p-4">
             <ScrollArea
               className={
@@ -121,7 +123,7 @@ export const ChatDialog = () => {
                                 alt="You"
                                 src="https://api.iconify.design/bi:stars.svg"
                               />
-                              <AvatarFallback>🤖</AvatarFallback>
+                              <AvatarFallback>🍃</AvatarFallback>
                             </Avatar>
                           </div>
                         </>
@@ -134,7 +136,9 @@ export const ChatDialog = () => {
                               {m.content == ""
                                 ? " "
                                 : m.role === "user" && (
-                                    <>{m.content as string}</>
+                                    <>
+                                      <Markdown>{m.content as string}</Markdown>
+                                    </>
                                   )}
                             </div>
                             <div className="transition-all font-medium text-gray-500 dark:text-gray-400">
@@ -147,7 +151,9 @@ export const ChatDialog = () => {
                           <div className="transition-all  flex flex-col gap-1 w-auto">
                             <div className="transition-all rounded-lg bg-lime-500  rounded-xl px-4 py-2 text-sm text-white">
                               {m.role === "assistant" && (
-                                <>{m.content as string}</>
+                                <>
+                                  <Markdown>{m.content as string}</Markdown>
+                                </>
                               )}
                             </div>
                             <div className="transition-all font-medium text-gray-500 dark:text-gray-400">
