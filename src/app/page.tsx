@@ -15,6 +15,7 @@ import { ChatDialog } from "@/app/components/Dialogs/ChatDialog";
 import Link from "next/link";
 import { FadeUp } from "./components/Animations/FadeUp";
 import { HeroComponent } from "../components/component/hero-component";
+import { ComponentTopic } from "../components/component/component-topic";
 
 export default function Pages() {
   return (
@@ -26,6 +27,7 @@ export default function Pages() {
         <div className="fixed bottom-10 right-10 z-50 bg-opacity-50 rounded-xl ">
           <ChatDialog />
         </div>
+        <ComponentTopic />
 
         <section className="py-6 md:py-12 lg:py-16">
           <div className="container space-y-8">
