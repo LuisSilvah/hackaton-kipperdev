@@ -7,8 +7,6 @@ import { AirQualityResponse, WeatherResponse } from "../types";
 type AirPollutionColorType = "green" | "yellow" | "orange" | "red" | "purple";
 
 export function AirPollution() {
-  const [latitude, setLatitude] = useState<number | null>(-23.5505);
-  const [longitude, setLongitude] = useState<number | null>(-46.6333);
   const [airQualityPollution, setAirQualityPollution] =
     useState<AirQualityResponse | null>(null);
   const [weather, setWeather] = useState<WeatherResponse | null>(null);
@@ -37,45 +35,35 @@ export function AirPollution() {
   };
 
   const fetchAirQualiPollution = async (lat: number, lon: number) => {
-    if(latitude !== null && longitude !== null) {
-      try {
-        const response = await fetch(
-          `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${process
-            .env.NEXT_PUBLIC_OPENWEATHERMAP_API!}`
-        );
-        const data: AirQualityResponse = await response.json();
-        setAirQualityPollution(data);
-        const aqi: number = data.list[0].main.aqi;
-  
-        if (aqi > 51) {
-          setAirPollutionColor("yellow");
-        } else if (aqi > 101) {
-          setAirPollutionColor("orange");
-        } else if (aqi > 151) {
-          setAirPollutionColor("red");
-        } else if (aqi > 201) {
-          setAirPollutionColor("purple");
-        } else {
-          setAirPollutionColor("green");
-        }
-      } catch (error) {
-        alert("Não foi posssivel buscar dados de poluição");
+    try {
+      const response = await fetch(`/api/air-quality?lat=${lat}&lon=${lon}`);
+      const data = await response.json();
+      setAirQualityPollution(data);
+      const aqi: number = data.list[0].main.aqi;
+
+      if (aqi > 201) {
+        setAirPollutionColor("purple");
+      } else if (aqi > 151) {
+        setAirPollutionColor("red");
+      } else if (aqi > 101) {
+        setAirPollutionColor("orange");
+      } else if (aqi > 51) {
+        setAirPollutionColor("yellow");
+      } else {
+        setAirPollutionColor("green");
       }
+    } catch (error) {
+      console.error("Não foi possível buscar dados de poluição", error);
     }
   };
 
   const fetchTemperature = async (lat: number, lon: number) => {
-    if(latitude !== null && longitude !== null) {
-      try {
-        const response = await fetch(
-          `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process
-            .env.NEXT_PUBLIC_OPENWEATHERMAP_API!}`
-        );
-        const data: WeatherResponse = await response.json();
-        setWeather(data);
-      } catch (error) {
-        alert("Não foi posssivel buscar dados de temperatura");
-      }
+    try {
+      const response = await fetch(`/api/weather?lat=${lat}&lon=${lon}`);
+      const data = await response.json();
+      setWeather(data);
+    } catch (error) {
+      console.error("Não foi possível buscar dados de temperatura", error);
     }
   };
 
