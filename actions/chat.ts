@@ -30,7 +30,7 @@ export const chat = async (messages: Message[]) => {
 
   const { textStream } = await streamText({
     model: google("models/gemini-1.5-pro-latest"),
-    system: `Voçe é um assistente pessoas que responde perguntas sobre mudanças climaticas e tem um pré-treinamento baseado neste conteudo : ${item.content} %${item.based} 
+    system: `Voçe é um assistente que responde perguntas sobre mudanças climaticas e tem um pré-treinamento baseado neste conteudo : ${item.content} %${item.based} 
      `,
     messages,
   })
