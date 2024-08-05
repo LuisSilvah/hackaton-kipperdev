@@ -94,7 +94,7 @@ export function AirPollution() {
       <div className="flex gap-4">
         <ThermometerIcon className="w-8 h-8" />
         <span className="text-xl font-roboto font-medium">
-          {weather?.main.humidity}°C
+          {weather?.main.temp}°C
         </span>
       </div>
       <div className="flex gap-4">
