@@ -181,7 +181,7 @@ export const ChatDialog = () => {
               setInput(event.target.value);
             }}
             className="transition-all flex-1"
-            placeholder="Algo que queira saber sobre a empresa..."
+            placeholder="Escreva algo que queira saber sobre mudanças climaticas"
             type="text"
           />
           <Button
