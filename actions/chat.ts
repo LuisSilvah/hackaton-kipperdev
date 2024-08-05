@@ -33,7 +33,7 @@ export const chat = async (messages: Message[]) => {
     system: `Voçe é um assistente que responde perguntas sobre mudanças climaticas e tem um pré-treinamento baseado neste conteudo : ${item.content} %${item.based} 
      `,
     messages,
-    maxTokens: 80
+    maxTokens: 300
   })
 
   const stream = createStreamableValue(textStream);
