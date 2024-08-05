@@ -10,10 +10,9 @@ Este repositório contém a solução desenvolvida durante o Hackathon com o tem
 Desenvolver uma solução tecnológica que utilize ferramentas e metodologias inovadoras para enfrentar os desafios impostos pelas crises climáticas. Nosso foco é criar um sistema eficiente que auxilie na rápida recuperação das cidades e na proteção da vida e dos bens dos cidadãos.
 ## Funcionalidades
 
-- Temas dark e light
-- Preview em tempo real
-- Modo tela cheia
-- Multiplataforma
+- Visualizar dados de temperatura e poluição
+- IA conversação sobre climas
+- Responsividade
 
 # Configuração e Instalação
 
@@ -38,20 +37,13 @@ npm install
 npm run dev
 ```
 
-## Referência
-
- - [NOME](link)
- - [NOME](link)
- - [NOME](link)
-
-
 ## Equipe
 
 | ![Luis Gustavo](https://avatars.githubusercontent.com/u/79490427?v=4) | ![Matheus Pereira](https://avatars.githubusercontent.com/u/80254945?v=4) | 
 |:---:|:---:|
 | [Luis Gustavo](https://github.com/LuisSilvah) | [Matheus Pereira](https://github.com/97revenge) |
 
-|  ![Breno Pinho](https://avatars.githubusercontent.com/u/146211848?v=4) | ![Victor Terra](https://avatars.githubusercontent.com/u/102810355?v=4) |
-|:---:|:---:|
-| [Breno Pinho](https://github.com/brenowho) | [Victor Terra](https://github.com/victorbterra) 
+|  ![Breno Pinho](https://avatars.githubusercontent.com/u/146211848?v=4) |
+|:---:|
+| [Breno Pinho](https://github.com/brenowho) | 
      
