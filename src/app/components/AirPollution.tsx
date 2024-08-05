@@ -67,6 +67,10 @@ export function AirPollution() {
     }
   };
 
+ function Ktoc(K: number){  
+    return Math.floor(K - 273.15);  
+  }  
+
   useEffect(() => {
     getLocation();
   }, []);
@@ -94,7 +98,7 @@ export function AirPollution() {
       <div className="flex gap-4">
         <ThermometerIcon className="w-8 h-8" />
         <span className="text-xl font-roboto font-medium">
-          {weather?.main.temp}°C
+          {weather && Ktoc(weather?.main.temp)}°C
         </span>
       </div>
       <div className="flex gap-4">
